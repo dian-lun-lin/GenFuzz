@@ -1,0 +1,11 @@
+__pycache__
+.ccls-cache
+
+*_build
+bin
+build
+*.out
+elf2hex
+tmp
+.idea
+.no_use

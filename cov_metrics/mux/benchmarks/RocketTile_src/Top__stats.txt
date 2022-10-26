@@ -1,0 +1,1211 @@
+Verilator Statistics Report
+
+Information:
+  Verilator 4.203 devel rev v4.202-119-gd066afdf (mod)
+  Arguments: -Wno-fatal --cc ./mux/benchmarks/RocketTile/RocketTile_VHarness.v -I./mux/benchmarks/RocketTile/ --hierarchical --threads 8 -weight_table weights.out -O3 --build -j 8 --prefix Top --exe ./entry.cu --stats -CFLAGS -O3 -I../3rd-party/ -I../src/ -I../benchmarks/RocketTile/ -DBATCH=256 -DDESIGN=RocketTile -LDFLAGS -lstdc++fs --threads-max-mtasks 65536 -Mdir mux/RocketTile_256_build
+
+Global Statistics:
+
+  Assertions, assert immediate statements                   0
+  Assertions, assert non-immediate statements               0
+  Assertions, cover statements                              0
+  Assertions, full/parallel case                            0
+  HierBlock, Hierarchical blocks                            0
+  MTask graph, final, critical path cost                87583
+  MTask graph, final, edge count                          288
+  MTask graph, final, mtask count                         117
+  MTask graph, final, parallelism factor                    4
+  MTask graph, final, total graph cost                 328335
+  Optimizations, Cases complex                              0
+  Optimizations, Cases parallelized                         0
+  Optimizations, Clocker decomposed vectors                 0
+  Optimizations, Clocker seen vectors                       0
+  Optimizations, Combined CFuncs                            0
+  Optimizations, Const bit op reduction                   574
+  Optimizations, Const bit op reduction                   296
+  Optimizations, Delayed shared-sets                        0
+  Optimizations, Gate assign merged                         0
+  Optimizations, Gate inputs replaced                  246767
+  Optimizations, Gate sigs deduped                         96
+  Optimizations, Gate sigs deleted                     119198
+  Optimizations, Inline unsupported                         0
+  Optimizations, Inlined instances                       3458
+  Optimizations, Lifetime assign deletions                  0
+  Optimizations, Lifetime constant prop                     0
+  Optimizations, Lifetime postassign deletions           6312
+  Optimizations, MergeCond longest merge                   12
+  Optimizations, MergeCond merged items                   283
+  Optimizations, MergeCond merges                          90
+  Optimizations, Prelim static constants extracted          2
+  Optimizations, Prelim static constants reused             4
+  Optimizations, Reloop iterations                          0
+  Optimizations, Reloops                                    0
+  Optimizations, Split always                            3409
+  Optimizations, Split always                               0
+  Optimizations, Substituted temps                      15252
+  Optimizations, Tables created                             0
+  Optimizations, Unrolled Iterations                        0
+  Optimizations, Unrolled Loops                             0
+  Optimizations, Vars localized                            31
+  Optimizations, expand limited                           438
+  Optimizations, expand wide words                      17931
+  Optimizations, expand wides                            2304
+  Optimizations, isolate_assignments blocks                 0
+  SplitVar, Split packed variables                          0
+  SplitVar, Split unpacked arrays                           0
+  Tristate, Tristate resolved nets                          0
+  Unknowns, variables created                               0
+  Warnings, Suppressed DECLFILENAME                         2
+  Warnings, Suppressed PINMISSING                          20
+  Warnings, Suppressed UNUSED                            2402
+
+Performance Statistics:
+
+  Stage, Elapsed time (sec), 001_cells               0.000000
+  Stage, Elapsed time (sec), 002_linkparse           0.231655
+  Stage, Elapsed time (sec), 003_linkdot             0.378487
+  Stage, Elapsed time (sec), 004_linkresolve         0.056256
+  Stage, Elapsed time (sec), 005_linklvalue          0.016480
+  Stage, Elapsed time (sec), 006_link                0.014732
+  Stage, Elapsed time (sec), 007_linkInc             0.015932
+  Stage, Elapsed time (sec), 008_param               0.038038
+  Stage, Elapsed time (sec), 009_paramlink           0.200917
+  Stage, Elapsed time (sec), 010_deadModules         0.026240
+  Stage, Elapsed time (sec), 011_width               0.122056
+  Stage, Elapsed time (sec), 012_widthcommit         0.044945
+  Stage, Elapsed time (sec), 013_const               0.019522
+  Stage, Elapsed time (sec), 014_assertpre           0.138496
+  Stage, Elapsed time (sec), 015_assert              0.018594
+  Stage, Elapsed time (sec), 016_wraptop             0.020089
+  Stage, Elapsed time (sec), 017_const               0.027294
+  Stage, Elapsed time (sec), 018_split_var           0.021306
+  Stage, Elapsed time (sec), 019_split_var           0.001649
+  Stage, Elapsed time (sec), 020_dearray             0.028845
+  Stage, Elapsed time (sec), 021_linkdot             0.257714
+  Stage, Elapsed time (sec), 022_begin               0.025009
+  Stage, Elapsed time (sec), 023_tristate            0.182573
+  Stage, Elapsed time (sec), 024_unknown             0.022361
+  Stage, Elapsed time (sec), 025_inline              1.021964
+  Stage, Elapsed time (sec), 026_linkdot             0.248796
+  Stage, Elapsed time (sec), 027_const               0.041862
+  Stage, Elapsed time (sec), 028_deadDtypes          0.036308
+  Stage, Elapsed time (sec), 029_inst                0.010059
+  Stage, Elapsed time (sec), 030_const               0.019131
+  Stage, Elapsed time (sec), 031_scope               0.422219
+  Stage, Elapsed time (sec), 032_linkdot             0.246542
+  Stage, Elapsed time (sec), 033_class               0.021672
+  Stage, Elapsed time (sec), 034_const               0.034346
+  Stage, Elapsed time (sec), 035_deadDtypesScoped    0.088270
+  Stage, Elapsed time (sec), 036_case                0.027161
+  Stage, Elapsed time (sec), 037_task                0.073519
+  Stage, Elapsed time (sec), 038_name                0.061341
+  Stage, Elapsed time (sec), 039_unroll              0.025389
+  Stage, Elapsed time (sec), 040_slice               0.027456
+  Stage, Elapsed time (sec), 041_const               0.034498
+  Stage, Elapsed time (sec), 042_life                0.043017
+  Stage, Elapsed time (sec), 043_table               0.024749
+  Stage, Elapsed time (sec), 044_const               0.034318
+  Stage, Elapsed time (sec), 045_deadDtypesScoped    0.081342
+  Stage, Elapsed time (sec), 046_active              0.053781
+  Stage, Elapsed time (sec), 047_split               0.115460
+  Stage, Elapsed time (sec), 048_splitas             0.027727
+  Stage, Elapsed time (sec), 049_gate                1.180570
+  Stage, Elapsed time (sec), 050_const               0.023667
+  Stage, Elapsed time (sec), 051_deadAllScoped       0.086081
+  Stage, Elapsed time (sec), 052_reorder             0.012288
+  Stage, Elapsed time (sec), 053_delayed             0.078535
+  Stage, Elapsed time (sec), 054_activetop           0.070369
+  Stage, Elapsed time (sec), 055_order               4.400772
+  Stage, Elapsed time (sec), 056_genclk              0.034841
+  Stage, Elapsed time (sec), 057_clock               0.049761
+  Stage, Elapsed time (sec), 058_const               0.025131
+  Stage, Elapsed time (sec), 059_life                0.042252
+  Stage, Elapsed time (sec), 060_life_post           0.110874
+  Stage, Elapsed time (sec), 061_const               0.026226
+  Stage, Elapsed time (sec), 062_deadAllScoped       0.054200
+  Stage, Elapsed time (sec), 063_changed             0.007015
+  Stage, Elapsed time (sec), 064_descope             0.060700
+  Stage, Elapsed time (sec), 065_localize            0.033694
+  Stage, Elapsed time (sec), 066_combine             0.035306
+  Stage, Elapsed time (sec), 067_const               0.023169
+  Stage, Elapsed time (sec), 068_deadAll             0.018966
+  Stage, Elapsed time (sec), 069_clean               0.040351
+  Stage, Elapsed time (sec), 070_premit              0.028455
+  Stage, Elapsed time (sec), 071_expand              0.096743
+  Stage, Elapsed time (sec), 072_const_cpp           0.126915
+  Stage, Elapsed time (sec), 073_subst               0.121977
+  Stage, Elapsed time (sec), 074_const_cpp           0.113810
+  Stage, Elapsed time (sec), 075_deadAll             0.032223
+  Stage, Elapsed time (sec), 076_merge_cond          0.007327
+  Stage, Elapsed time (sec), 077_reloop              0.005569
+  Stage, Elapsed time (sec), 078_depth               0.026490
+  Stage, Elapsed time (sec), 079_cast                0.069871
+  Stage, Elapsed time (sec), 080_cuse                0.041835
+  Stage, Memory (MB), 001_cells                     342.746094
+  Stage, Memory (MB), 002_linkparse                 342.746094
+  Stage, Memory (MB), 003_linkdot                   428.960938
+  Stage, Memory (MB), 004_linkresolve               428.960938
+  Stage, Memory (MB), 005_linklvalue                428.960938
+  Stage, Memory (MB), 006_link                      428.960938
+  Stage, Memory (MB), 007_linkInc                   428.960938
+  Stage, Memory (MB), 008_param                     429.597656
+  Stage, Memory (MB), 009_paramlink                 429.597656
+  Stage, Memory (MB), 010_deadModules               429.597656
+  Stage, Memory (MB), 011_width                     429.597656
+  Stage, Memory (MB), 012_widthcommit               429.597656
+  Stage, Memory (MB), 013_const                     429.597656
+  Stage, Memory (MB), 014_assertpre                 429.597656
+  Stage, Memory (MB), 015_assert                    429.597656
+  Stage, Memory (MB), 016_wraptop                   429.597656
+  Stage, Memory (MB), 017_const                     429.597656
+  Stage, Memory (MB), 018_split_var                 429.597656
+  Stage, Memory (MB), 019_split_var                 429.597656
+  Stage, Memory (MB), 020_dearray                   429.597656
+  Stage, Memory (MB), 021_linkdot                   429.597656
+  Stage, Memory (MB), 022_begin                     429.597656
+  Stage, Memory (MB), 023_tristate                  429.597656
+  Stage, Memory (MB), 024_unknown                   429.597656
+  Stage, Memory (MB), 025_inline                    1190.917969
+  Stage, Memory (MB), 026_linkdot                   1190.917969
+  Stage, Memory (MB), 027_const                     1190.917969
+  Stage, Memory (MB), 028_deadDtypes                1190.917969
+  Stage, Memory (MB), 029_inst                      1190.917969
+  Stage, Memory (MB), 030_const                     1190.917969
+  Stage, Memory (MB), 031_scope                     1190.917969
+  Stage, Memory (MB), 032_linkdot                   1190.917969
+  Stage, Memory (MB), 033_class                     1190.917969
+  Stage, Memory (MB), 034_const                     1190.917969
+  Stage, Memory (MB), 035_deadDtypesScoped          1190.917969
+  Stage, Memory (MB), 036_case                      1190.917969
+  Stage, Memory (MB), 037_task                      1190.917969
+  Stage, Memory (MB), 038_name                      1190.917969
+  Stage, Memory (MB), 039_unroll                    1190.917969
+  Stage, Memory (MB), 040_slice                     1190.917969
+  Stage, Memory (MB), 041_const                     1190.917969
+  Stage, Memory (MB), 042_life                      1190.917969
+  Stage, Memory (MB), 043_table                     1190.917969
+  Stage, Memory (MB), 044_const                     1190.917969
+  Stage, Memory (MB), 045_deadDtypesScoped          1190.917969
+  Stage, Memory (MB), 046_active                    1190.917969
+  Stage, Memory (MB), 047_split                     1190.917969
+  Stage, Memory (MB), 048_splitas                   1190.917969
+  Stage, Memory (MB), 049_gate                      1190.917969
+  Stage, Memory (MB), 050_const                     1190.917969
+  Stage, Memory (MB), 051_deadAllScoped             1198.687500
+  Stage, Memory (MB), 052_reorder                   1198.687500
+  Stage, Memory (MB), 053_delayed                   1198.687500
+  Stage, Memory (MB), 054_activetop                 1198.687500
+  Stage, Memory (MB), 055_order                     1198.687500
+  Stage, Memory (MB), 056_genclk                    1198.687500
+  Stage, Memory (MB), 057_clock                     1198.687500
+  Stage, Memory (MB), 058_const                     1198.687500
+  Stage, Memory (MB), 059_life                      1198.687500
+  Stage, Memory (MB), 060_life_post                 1198.687500
+  Stage, Memory (MB), 061_const                     1198.687500
+  Stage, Memory (MB), 062_deadAllScoped             1198.687500
+  Stage, Memory (MB), 063_changed                   1198.687500
+  Stage, Memory (MB), 064_descope                   1198.687500
+  Stage, Memory (MB), 065_localize                  1198.687500
+  Stage, Memory (MB), 066_combine                   1198.687500
+  Stage, Memory (MB), 067_const                     1198.687500
+  Stage, Memory (MB), 068_deadAll                   1198.687500
+  Stage, Memory (MB), 069_clean                     1198.687500
+  Stage, Memory (MB), 070_premit                    1198.687500
+  Stage, Memory (MB), 071_expand                    1198.687500
+  Stage, Memory (MB), 072_const_cpp                 1198.687500
+  Stage, Memory (MB), 073_subst                     1198.687500
+  Stage, Memory (MB), 074_const_cpp                 1198.687500
+  Stage, Memory (MB), 075_deadAll                   1198.687500
+  Stage, Memory (MB), 076_merge_cond                1198.687500
+  Stage, Memory (MB), 077_reloop                    1198.687500
+  Stage, Memory (MB), 078_depth                     1198.687500
+  Stage, Memory (MB), 079_cast                      1198.687500
+  Stage, Memory (MB), 080_cuse                      1198.687500
+
+Stage Statistics:
+  Stat                                       Link       PreOrder   Scoped     Final      Final_Fast
+  --------                                   -------    -------    -------    -------    -------  
+
+  Branch prediction,                            6224      17550      17715      17681      17220
+  Branch prediction, VL_UNLIKELY                                                  127        124
+
+  Instruction count, TOTAL                    596269    2536698    2492095    4056283    2054163
+  Instruction count, fast critical                 0          0    1377367    2156010    2048721
+
+  Node count, ACTIVE                                       9788
+  Node count, ADD                                125       7221       7221       7245       3635
+  Node count, ALWAYS                              67       6166
+  Node count, ALWAYSPOST                                     49
+  Node count, AND                               4747      12024      12354      69358      35204
+  Node count, ARRAYSEL                                      138        138        154        110
+  Node count, ASSIGN                                        153        155       7287       3629
+  Node count, ASSIGNDLY                         4938      14828      14828      14804       6357
+  Node count, ASSIGNPOST                                   6327         15         15         15
+  Node count, ASSIGNPRE                                    6377         65         65         65
+  Node count, ASSIGNW                          67369      23000      23000      22855      11366
+  Node count, ATTROF                            7378
+  Node count, BASICDTYPE                       89339        414        414        607
+  Node count, BEGIN                             9523
+  Node count, CCALL                                                    257        257        247
+  Node count, CCAST                                                             87103      44139
+  Node count, CELL                              3457
+  Node count, CFILE                                                                30
+  Node count, CFUNC                                                    262        264        247
+  Node count, CHANGEDET                                                  1          1
+  Node count, CONCAT                           11996      19311      19311        292        146
+  Node count, COND                              2512       5255       5255       5335       2782
+  Node count, CONDBOUND                                       6          6          6          3
+  Node count, CONST                            87974      95095      95095     175689      85018
+  Node count, CRESET                                                            18050
+  Node count, CSTMT                                                      5          9
+  Node count, DISPLAY                             40        124        124        124        124
+  Node count, EQ                                5221      16567      16567      16874       8394
+  Node count, EXECGRAPH                                                  1          1          1
+  Node count, EXTEND                                       6616       6616        322        162
+  Node count, EXTENDS                                       142        142        151         80
+  Node count, GT                                  20        394        394        394        196
+  Node count, GTE                                 46        504        504        514        258
+  Node count, GTES                                            9          9          9          5
+  Node count, GTS                                           100        100        110         54
+  Node count, IF                                6224      17550      17715      17808      17344
+  Node count, INITIAL                                         3
+  Node count, LOGNOT                             200
+  Node count, LT                                 239        234        234        234        119
+  Node count, LTE                                 79         99         99        105         54
+  Node count, LTES                                           38         38         38         20
+  Node count, LTS                                             2          2          2          1
+  Node count, MODULE                             116          1          1          1
+  Node count, MTASKBODY                                                117        117        117
+  Node count, MUL                                  6          6          6          6          3
+  Node count, MULS                                            2          2          2          1
+  Node count, NEGATE                              79          6          6        521        261
+  Node count, NEQ                                569       1998       1998       2302       1207
+  Node count, NETLIST                              1          1          1          1
+  Node count, NOT                               1757      15552      15882      15990       8048
+  Node count, OR                                3082      13082      13082      41035      20661
+  Node count, PIN                              28645
+  Node count, RANGE                            25706         20         20         20
+  Node count, REDXOR                                                                4          2
+  Node count, REPLICATE                        12792        523        523
+  Node count, SCOPE                                           1          1          1
+  Node count, SCOPENAME                           20         62         62         62         62
+  Node count, SEL                                         28063      28063
+  Node count, SELBIT                            4952
+  Node count, SELEXTRACT                        2426
+  Node count, SENITEM                             67          4
+  Node count, SENTREE                             67          4
+  Node count, SFORMATF                            40        124        124        124        124
+  Node count, SHIFTL                             290       1262       1262      25754      12946
+  Node count, SHIFTR                              60         93         93      24729      12715
+  Node count, SHIFTRS                             15        192        192        192         96
+  Node count, SIGNED                             798
+  Node count, STOP                                20         62         62         62         62
+  Node count, SUB                                 69        152        152        152         79
+  Node count, TEXT                                          904        909        913        904
+  Node count, TIME                                           62         62         62         62
+  Node count, TOPSCOPE                                        1          1          1
+  Node count, TYPETABLE                            1          1          1          1
+  Node count, UNPACKARRAYDTYPE                    20         20         20         20
+  Node count, UNSIGNED                            92
+  Node count, VAR                              89229      24391      18080      19463        753
+  Node count, VARREF                          210932     182352     157767     198792      91805
+  Node count, VARSCOPE                                    24391      18080
+  Node count, WORDSEL                                                           30133      14904
+  Node count, XOR                                138        275        275        343        175
+
+  Node pairs, ACTIVE_ALWAYS                                3409
+  Node pairs, ACTIVE_ALWAYSPOST                              49
+  Node pairs, ACTIVE_ASSIGNPRE                             6327
+  Node pairs, ACTIVE_ASSIGNW                                  2
+  Node pairs, ACTIVE_INITIAL                                  1
+  Node pairs, ADD_AND                                         4          4         83         41
+  Node pairs, ADD_CCAST                                                         14253       7150
+  Node pairs, ADD_COND                                                              4          2
+  Node pairs, ADD_CONST                           81       7148       7148         25         13
+  Node pairs, ADD_EXTEND                                     94         94
+  Node pairs, ADD_EXTENDS                                    45         45         45         24
+  Node pairs, ADD_NOT                                         2          2          2          1
+  Node pairs, ADD_OR                                                               23         12
+  Node pairs, ADD_SEL                                        69         69
+  Node pairs, ADD_SIGNED                          44
+  Node pairs, ADD_VARREF                         125       7080       7080         55         27
+  Node pairs, ALWAYSPOST_IF                                  49
+  Node pairs, ALWAYS_ASSIGNDLY                              102
+  Node pairs, ALWAYS_BEGIN                        67
+  Node pairs, ALWAYS_IF                                    6064
+  Node pairs, ALWAYS_SENTREE                      67
+  Node pairs, AND_ADD                                        18         18       6915       3468
+  Node pairs, AND_AND                                       816        816       1263        683
+  Node pairs, AND_ARRAYSEL                                    4          4          4          2
+  Node pairs, AND_CCAST                                                         18633       9526
+  Node pairs, AND_CONCAT                                     27         27
+  Node pairs, AND_COND                                       92         92        608        336
+  Node pairs, AND_CONST                          368        995        995      58042      29420
+  Node pairs, AND_EQ                                       5780       5780       5712       2867
+  Node pairs, AND_EXTEND                                    370        370
+  Node pairs, AND_EXTENDS                                                          74         40
+  Node pairs, AND_GT                                         44         44         44         22
+  Node pairs, AND_GTE                                       202        202        198        100
+  Node pairs, AND_GTES                                        9          9          9          5
+  Node pairs, AND_GTS                                        12         12         12          6
+  Node pairs, AND_LT                                         96         96         93         47
+  Node pairs, AND_LTE                                        30         30         30         16
+  Node pairs, AND_LTES                                       16         16         16          8
+  Node pairs, AND_MUL                                                               1          1
+  Node pairs, AND_NEGATE                                                          147         74
+  Node pairs, AND_NEQ                                       350        350        350        191
+  Node pairs, AND_NOT                                      2849       3179      11020       5539
+  Node pairs, AND_OR                                        572        572      12334       6194
+  Node pairs, AND_REPLICATE                                  96         96
+  Node pairs, AND_SEL                                      1131       1131
+  Node pairs, AND_SHIFTL                                    234        234       9217       4610
+  Node pairs, AND_SHIFTR                                                        11559       5998
+  Node pairs, AND_SHIFTRS                                                           4          2
+  Node pairs, AND_SIGNED                         154
+  Node pairs, AND_SUB                                         6          6         94         47
+  Node pairs, AND_VARREF                        8972      10265      10595       1607        848
+  Node pairs, AND_WORDSEL                                                         585        283
+  Node pairs, AND_XOR                                        34         34        145         75
+  Node pairs, ARRAYSEL_AND                                                         26         13
+  Node pairs, ARRAYSEL_CONCAT                                52         52
+  Node pairs, ARRAYSEL_CONST                                  6          6          6          4
+  Node pairs, ARRAYSEL_OR                                                          64         38
+  Node pairs, ARRAYSEL_SEL                                   26         26
+  Node pairs, ARRAYSEL_VARREF                               192        192        212        165
+  Node pairs, ASSIGNDLY_ADD                                  31         31
+  Node pairs, ASSIGNDLY_AND                       12         87         87        881        864
+  Node pairs, ASSIGNDLY_CCAST                                                      19         17
+  Node pairs, ASSIGNDLY_CONCAT                               14         14
+  Node pairs, ASSIGNDLY_COND                                218        218        153        127
+  Node pairs, ASSIGNDLY_CONST                   3253       9249       9249       9250        984
+  Node pairs, ASSIGNDLY_EQ                         4         17         17         17         17
+  Node pairs, ASSIGNDLY_EXTEND                               21         21
+  Node pairs, ASSIGNDLY_NEQ                                  10         10         10         10
+  Node pairs, ASSIGNDLY_NOT                                  37         37
+  Node pairs, ASSIGNDLY_OR                         3         41         41         50         50
+  Node pairs, ASSIGNDLY_REPLICATE                 30
+  Node pairs, ASSIGNDLY_SEL                                 679        679
+  Node pairs, ASSIGNDLY_SELBIT                    23
+  Node pairs, ASSIGNDLY_SELEXTRACT                30
+  Node pairs, ASSIGNDLY_SHIFTL                                1          1
+  Node pairs, ASSIGNDLY_VARREF                  6521      19244      19244      19219      10636
+  Node pairs, ASSIGNDLY_WORDSEL                                                     9          9
+  Node pairs, ASSIGNDLY_XOR                                   7          7
+  Node pairs, ASSIGNPOST_VARREF                           12654         30         30         30
+  Node pairs, ASSIGNPRE_CONST                                50         50         50         50
+  Node pairs, ASSIGNPRE_VARREF                            12704         80         80         80
+  Node pairs, ASSIGNW_ADD                        125       6810       6810
+  Node pairs, ASSIGNW_AND                       4693       1992       1992      16255       8102
+  Node pairs, ASSIGNW_CCAST                                                       132         53
+  Node pairs, ASSIGNW_CONCAT                               3914       3914
+  Node pairs, ASSIGNW_COND                      2512        852        852        634        316
+  Node pairs, ASSIGNW_CONST                       17                                5
+  Node pairs, ASSIGNW_EQ                        5217        124        124        160         80
+  Node pairs, ASSIGNW_EXTEND                                742        742
+  Node pairs, ASSIGNW_GT                          20          8          8          8          4
+  Node pairs, ASSIGNW_GTE                         46          2          2          2          1
+  Node pairs, ASSIGNW_LT                         239         66         66         66         33
+  Node pairs, ASSIGNW_LTE                         79
+  Node pairs, ASSIGNW_MUL                          6
+  Node pairs, ASSIGNW_NEQ                        569          8          8         16          8
+  Node pairs, ASSIGNW_NOT                       1757          4          4
+  Node pairs, ASSIGNW_OR                        3079       8316       8316       4621       2309
+  Node pairs, ASSIGNW_REPLICATE                11799
+  Node pairs, ASSIGNW_SEL                                     6          6
+  Node pairs, ASSIGNW_SELBIT                    4892
+  Node pairs, ASSIGNW_SELEXTRACT                2396
+  Node pairs, ASSIGNW_SHIFTL                     290         16         16
+  Node pairs, ASSIGNW_SHIFTR                      60          2          2
+  Node pairs, ASSIGNW_SHIFTRS                     15          6          6
+  Node pairs, ASSIGNW_SIGNED                     150
+  Node pairs, ASSIGNW_SUB                         69         76         76          4          2
+  Node pairs, ASSIGNW_UNSIGNED                    92
+  Node pairs, ASSIGNW_VARREF                   96478      23000      23000      23799      11820
+  Node pairs, ASSIGNW_XOR                        138         56         56          8          4
+  Node pairs, ASSIGN_ADD                                                            7          3
+  Node pairs, ASSIGN_AND                                                          336        186
+  Node pairs, ASSIGN_ARRAYSEL                                50         50         48         48
+  Node pairs, ASSIGN_CCAST                                                         79         37
+  Node pairs, ASSIGN_CONCAT                                                       292        146
+  Node pairs, ASSIGN_COND                                     1          1         49         13
+  Node pairs, ASSIGN_CONST                                   53         53        575        305
+  Node pairs, ASSIGN_EXTEND                                                       322        162
+  Node pairs, ASSIGN_EXTENDS                                                        8          4
+  Node pairs, ASSIGN_MUL                                                            1
+  Node pairs, ASSIGN_MULS                                                           2          1
+  Node pairs, ASSIGN_NEGATE                                                         4          1
+  Node pairs, ASSIGN_NOT                                                           20          3
+  Node pairs, ASSIGN_OR                                                          4680       2336
+  Node pairs, ASSIGN_SEL                                     48         48
+  Node pairs, ASSIGN_SHIFTL                                                       174         91
+  Node pairs, ASSIGN_SHIFTR                                                        10          5
+  Node pairs, ASSIGN_SHIFTRS                                                      128         64
+  Node pairs, ASSIGN_SUB                                                            2          1
+  Node pairs, ASSIGN_VARREF                                 154        158       1109        630
+  Node pairs, ASSIGN_WORDSEL                                                     6682       3199
+  Node pairs, ASSIGN_XOR                                                           46         23
+  Node pairs, ATTROF_VARREF                     7378
+  Node pairs, BASICDTYPE_RANGE                 25686
+  Node pairs, BEGIN_ASSIGNDLY                   4938
+  Node pairs, BEGIN_DISPLAY                       40
+  Node pairs, BEGIN_IF                          4545
+  Node pairs, CCAST_AND                                                           444        234
+  Node pairs, CCAST_CCAST                                                        2016       1009
+  Node pairs, CCAST_COND                                                          107         56
+  Node pairs, CCAST_CONST                                                        7577       3816
+  Node pairs, CCAST_EQ                                                             22         11
+  Node pairs, CCAST_LTES                                                            4          2
+  Node pairs, CCAST_NEGATE                                                          2          1
+  Node pairs, CCAST_NEQ                                                           106         53
+  Node pairs, CCAST_NOT                                                             1          1
+  Node pairs, CCAST_OR                                                            257        121
+  Node pairs, CCAST_SHIFTR                                                       4482       2357
+  Node pairs, CCAST_VARREF                                                      71301      36085
+  Node pairs, CCAST_WORDSEL                                                       718        360
+  Node pairs, CCAST_XOR                                                            66         33
+  Node pairs, CELL_PIN                          3457
+  Node pairs, CFUNC_ASSIGN                                               3         21         16
+  Node pairs, CFUNC_ASSIGNDLY                                            8          6          6
+  Node pairs, CFUNC_ASSIGNPOST                                           1          1          1
+  Node pairs, CFUNC_ASSIGNPRE                                           20         20         20
+  Node pairs, CFUNC_ASSIGNW                                            159        139        134
+  Node pairs, CFUNC_CCALL                                                2          2
+  Node pairs, CFUNC_CHANGEDET                                            1          1
+  Node pairs, CFUNC_CSTMT                                                2          3
+  Node pairs, CFUNC_EXECGRAPH                                            1          1          1
+  Node pairs, CFUNC_IF                                                  67         72         71
+  Node pairs, CFUNC_VAR                                                            56         50
+  Node pairs, CONCAT_ADD                                      6          6
+  Node pairs, CONCAT_AND                                   6579       6579          2          1
+  Node pairs, CONCAT_CCAST                                                          8          4
+  Node pairs, CONCAT_CONCAT                               14347      14347
+  Node pairs, CONCAT_COND                                   471        471
+  Node pairs, CONCAT_CONST                      2276        707        707
+  Node pairs, CONCAT_EQ                                    2541       2541          2          1
+  Node pairs, CONCAT_EXTEND                                3185       3185
+  Node pairs, CONCAT_GT                                      30         30
+  Node pairs, CONCAT_GTE                                      2          2
+  Node pairs, CONCAT_GTS                                      8          8
+  Node pairs, CONCAT_LT                                      16         16
+  Node pairs, CONCAT_LTE                                      6          6
+  Node pairs, CONCAT_LTES                                     8          8
+  Node pairs, CONCAT_NEGATE                                                         8          4
+  Node pairs, CONCAT_NEQ                                   1031       1031
+  Node pairs, CONCAT_NOT                                    722        722
+  Node pairs, CONCAT_OR                                     899        899        272        136
+  Node pairs, CONCAT_REPLICATE                   788        303        303
+  Node pairs, CONCAT_SEL                                   3052       3052
+  Node pairs, CONCAT_SHIFTL                                  16         16
+  Node pairs, CONCAT_SIGNED                      107
+  Node pairs, CONCAT_SUB                                     12         12
+  Node pairs, CONCAT_VARREF                    20821       4663       4663        292        146
+  Node pairs, CONCAT_XOR                                     18         18
+  Node pairs, CONDBOUND_ARRAYSEL                              6          6          6          3
+  Node pairs, CONDBOUND_CONST                                 6          6          6          3
+  Node pairs, CONDBOUND_GTE                                   6          6          6          3
+  Node pairs, COND_ADD                                      289        289        297        150
+  Node pairs, COND_AND                                      234        234       2295       1212
+  Node pairs, COND_ARRAYSEL                                  78         78         72         42
+  Node pairs, COND_CCAST                                                         3917       2099
+  Node pairs, COND_CONCAT                                   310        310
+  Node pairs, COND_COND                                    2292       2292       2310       1205
+  Node pairs, COND_CONDBOUND                                  6          6          6          3
+  Node pairs, COND_CONST                        1721       3327       3327       3419       1768
+  Node pairs, COND_EQ                                      1177       1177       1260        616
+  Node pairs, COND_EXTEND                                   474        474
+  Node pairs, COND_GT                                        22         22         18          9
+  Node pairs, COND_GTE                                                              6          3
+  Node pairs, COND_GTS                                        8          8          8          4
+  Node pairs, COND_LT                                        20         20         20         10
+  Node pairs, COND_LTE                                        5          5          5          3
+  Node pairs, COND_LTES                                       6          6          6          4
+  Node pairs, COND_NEGATE                                                           4          2
+  Node pairs, COND_NEQ                                      377        377        369        190
+  Node pairs, COND_NOT                                      201        201        181        110
+  Node pairs, COND_OR                                       380        380        832        436
+  Node pairs, COND_REPLICATE                     160          8          8
+  Node pairs, COND_SEL                                     2617       2617
+  Node pairs, COND_SHIFTL                                    66         66         32         19
+  Node pairs, COND_SHIFTR                                                         268        136
+  Node pairs, COND_SIGNED                         58
+  Node pairs, COND_SUB                                       26         26         20         13
+  Node pairs, COND_VARREF                       5597       3830       3830        496        265
+  Node pairs, COND_WORDSEL                                                        154         41
+  Node pairs, COND_XOR                                       12         12         10          6
+  Node pairs, CRESET_VARREF                                                     18050
+  Node pairs, CSTMT_TEXT                                                 5          9
+  Node pairs, DISPLAY_CONST                       20         62         62         62         62
+  Node pairs, DISPLAY_SFORMATF                    40        124        124        124        124
+  Node pairs, EQ_AND                                        617        617       8263       4107
+  Node pairs, EQ_CCAST                                                          12804       6370
+  Node pairs, EQ_CONCAT                                     196        196
+  Node pairs, EQ_COND                                         4          4          4          2
+  Node pairs, EQ_CONST                          4012      11777      11777      12100       6007
+  Node pairs, EQ_EQ                                           4          4          4          2
+  Node pairs, EQ_EXTEND                                      30         30
+  Node pairs, EQ_NOT                                        307        307
+  Node pairs, EQ_OR                                           6          6        238        132
+  Node pairs, EQ_SEL                                       7210       7210
+  Node pairs, EQ_SHIFTL                                      18         18
+  Node pairs, EQ_SIGNED                          166
+  Node pairs, EQ_VARREF                         6264      12965      12965        335        168
+  Node pairs, EXECGRAPH_MTASKBODY                                        1          1          1
+  Node pairs, EXTENDS_ADD                                     8          8
+  Node pairs, EXTENDS_AND                                                          99         51
+  Node pairs, EXTENDS_CCAST                                                        18         12
+  Node pairs, EXTENDS_CONCAT                                 42         42
+  Node pairs, EXTENDS_COND                                    4          4          2          1
+  Node pairs, EXTENDS_EXTEND                                 60         60
+  Node pairs, EXTENDS_MULS                                    2          2
+  Node pairs, EXTENDS_NOT                                     2          2
+  Node pairs, EXTENDS_OR                                                           22         11
+  Node pairs, EXTENDS_SEL                                     2          2
+  Node pairs, EXTENDS_VARREF                                 22         22         10          5
+  Node pairs, EXTEND_ADD                                     26         26          2          1
+  Node pairs, EXTEND_AND                                    135        135         86         42
+  Node pairs, EXTEND_CCAST                                                          5          3
+  Node pairs, EXTEND_CONCAT                                 210        210
+  Node pairs, EXTEND_COND                                   135        135          3          1
+  Node pairs, EXTEND_LTES                                     8          8
+  Node pairs, EXTEND_MUL                                      2          2
+  Node pairs, EXTEND_NEQ                                     28         28
+  Node pairs, EXTEND_NOT                                     56         56
+  Node pairs, EXTEND_OR                                      38         38         24         10
+  Node pairs, EXTEND_SEL                                   1160       1160
+  Node pairs, EXTEND_SHIFTL                                  98         98         32         16
+  Node pairs, EXTEND_SHIFTR                                   2          2
+  Node pairs, EXTEND_SUB                                      4          4
+  Node pairs, EXTEND_VARREF                                4582       4582        170         89
+  Node pairs, EXTEND_XOR                                    132        132
+  Node pairs, GTES_AND                                                              9          5
+  Node pairs, GTES_CONST                                      9          9          9          5
+  Node pairs, GTES_SEL                                        9          9
+  Node pairs, GTE_ADD                                         4          4
+  Node pairs, GTE_AND                                                             334        168
+  Node pairs, GTE_CCAST                                                           186         93
+  Node pairs, GTE_COND                                      232        232
+  Node pairs, GTE_CONST                           34        490        490        500        251
+  Node pairs, GTE_EXTEND                                      6          6
+  Node pairs, GTE_SEL                                        88         88
+  Node pairs, GTE_SHIFTL                                      2          2
+  Node pairs, GTE_SIGNED                          12
+  Node pairs, GTE_VARREF                          46        186        186          8          4
+  Node pairs, GTS_AND                                                              28         14
+  Node pairs, GTS_CCAST                                                            76         37
+  Node pairs, GTS_CONST                                     100        100        108         53
+  Node pairs, GTS_EXTEND                                     16         16
+  Node pairs, GTS_SEL                                        12         12
+  Node pairs, GTS_VARREF                                     72         72          8          4
+  Node pairs, GT_AND                                                              282        141
+  Node pairs, GT_CCAST                                                            108         53
+  Node pairs, GT_CONCAT                                       8          8
+  Node pairs, GT_CONST                            18        390        390        390        194
+  Node pairs, GT_OR                                                                 8          4
+  Node pairs, GT_SEL                                        282        282
+  Node pairs, GT_VARREF                           22        108        108
+  Node pairs, IF_AND                              42         62        392       7818       3819
+  Node pairs, IF_ASSIGN                                      52         52        205        110
+  Node pairs, IF_ASSIGNDLY                                14723      14723      14668       6239
+  Node pairs, IF_ASSIGNW                                                           76         20
+  Node pairs, IF_BEGIN                          9456
+  Node pairs, IF_CCALL                                                 165        165        165
+  Node pairs, IF_COND                                                              12          3
+  Node pairs, IF_CONST                             4
+  Node pairs, IF_CSTMT                                                              3
+  Node pairs, IF_DISPLAY                                    124        124        124        124
+  Node pairs, IF_EQ                                        4652       4652       4668       2244
+  Node pairs, IF_GT                                                                 4          1
+  Node pairs, IF_GTE                                          4          4          4          2
+  Node pairs, IF_IF                                       11102      11102      11108      10686
+  Node pairs, IF_LOGNOT                          200
+  Node pairs, IF_LT                                          16         16         16          8
+  Node pairs, IF_NEQ                                         80         80         94         41
+  Node pairs, IF_NOT                                       7192       7192
+  Node pairs, IF_OR                                          16         16         16          7
+  Node pairs, IF_SEL                                        198        198
+  Node pairs, IF_VARREF                        12202      22880      22880      22984      11219
+  Node pairs, INITIAL_ASSIGN                                  3
+  Node pairs, LOGNOT_VARREF                      200
+  Node pairs, LTES_AND                                                             30         15
+  Node pairs, LTES_CCAST                                                            6          4
+  Node pairs, LTES_CONST                                     38         38         36         19
+  Node pairs, LTES_SEL                                       30         30
+  Node pairs, LTES_VARREF                                     8          8          4          2
+  Node pairs, LTE_AND                                                              77         40
+  Node pairs, LTE_CCAST                                                            28         14
+  Node pairs, LTE_CONST                           66         99         99        105         54
+  Node pairs, LTE_SEL                                        71         71
+  Node pairs, LTE_SIGNED                          26
+  Node pairs, LTE_VARREF                          66         28         28
+  Node pairs, LTS_AND                                                               4          2
+  Node pairs, LTS_EXTEND                                      4          4
+  Node pairs, LT_AND                                                              104         54
+  Node pairs, LT_CCAST                                                            152         76
+  Node pairs, LT_COND                                        16         16
+  Node pairs, LT_CONST                           168        132        132        132         68
+  Node pairs, LT_EXTEND                                      30         30
+  Node pairs, LT_SEL                                        112        112
+  Node pairs, LT_SHIFTL                                      30         30         16          8
+  Node pairs, LT_SIGNED                           38
+  Node pairs, LT_VARREF                          272        148        148         64         32
+  Node pairs, MODULE_VAR                         116          1          1          1
+  Node pairs, MTASKBODY_CCALL                                            1          1          1
+  Node pairs, MTASKBODY_IF                                             116        116        116
+  Node pairs, MULS_EXTENDS                                    4          4
+  Node pairs, MULS_VARREF                                                           4          2
+  Node pairs, MUL_CCAST                                                            10          6
+  Node pairs, MUL_CONST                            3          4          4
+  Node pairs, MUL_EXTEND                                      8          8
+  Node pairs, MUL_SIGNED                           2
+  Node pairs, MUL_VARREF                           7                                2
+  Node pairs, NEGATE_AND                                                            2          1
+  Node pairs, NEGATE_CCAST                                                        515        259
+  Node pairs, NEGATE_CONST                        79
+  Node pairs, NEGATE_EXTEND                                   4          4
+  Node pairs, NEGATE_SEL                                      2          2
+  Node pairs, NEGATE_VARREF                                                         4          1
+  Node pairs, NEQ_AND                                        79         79       1599        839
+  Node pairs, NEQ_CCAST                                                           526        274
+  Node pairs, NEQ_CONCAT                                     25         25
+  Node pairs, NEQ_COND                                                              4          2
+  Node pairs, NEQ_CONST                          540       1945       1945       2249       1180
+  Node pairs, NEQ_GTS                                         8          8          8          4
+  Node pairs, NEQ_NOT                                        21         21          8          5
+  Node pairs, NEQ_OR                                          2          2         27         14
+  Node pairs, NEQ_SEL                                      1225       1225
+  Node pairs, NEQ_SIGNED                           4
+  Node pairs, NEQ_VARREF                         594        691        691        171         90
+  Node pairs, NEQ_WORDSEL                                                          12          6
+  Node pairs, NETLIST_CFILE                                                         1
+  Node pairs, NETLIST_MODULE                       1          1          1          1
+  Node pairs, NETLIST_TYPETABLE                    1          1          1          1
+  Node pairs, NOT_ADD                                        16         16         16          8
+  Node pairs, NOT_AND                                        29         29        198        109
+  Node pairs, NOT_CCAST                                                         10513       5297
+  Node pairs, NOT_CONCAT                                     57         57
+  Node pairs, NOT_COND                                       86         86        113         52
+  Node pairs, NOT_EXTEND                                     22         22
+  Node pairs, NOT_OR                                        590        590        791        390
+  Node pairs, NOT_SEL                                      5058       5058
+  Node pairs, NOT_SHIFTL                                     10         10         10          5
+  Node pairs, NOT_SHIFTR                                                         3991       2003
+  Node pairs, NOT_SUB                                         8          8          8          4
+  Node pairs, NOT_VARREF                        1757       9676      10006        153         87
+  Node pairs, NOT_WORDSEL                                                         197         93
+  Node pairs, OR_AND                                       1370       1370      22088      11075
+  Node pairs, OR_CCAST                                                          13896       7004
+  Node pairs, OR_CONCAT                                      34         34
+  Node pairs, OR_COND                                       792        792        974        483
+  Node pairs, OR_CONST                            23        141        141        617        329
+  Node pairs, OR_EQ                                        2272       2272       2556       1320
+  Node pairs, OR_EXTEND                                     298        298
+  Node pairs, OR_GT                                         290        290        296        148
+  Node pairs, OR_GTE                                        284        284        288        144
+  Node pairs, OR_GTS                                         64         64         76         37
+  Node pairs, OR_LT                                          20         20         22         11
+  Node pairs, OR_LTE                                         58         58         66         33
+  Node pairs, OR_LTES                                                               2          1
+  Node pairs, OR_LTS                                          2          2          2          1
+  Node pairs, OR_NEGATE                                                           116         58
+  Node pairs, OR_NEQ                                        114        114        305        163
+  Node pairs, OR_NOT                                       3999       3999       3973       1992
+  Node pairs, OR_OR                                        1966       1966      15831       7982
+  Node pairs, OR_REPLICATE                                  116        116
+  Node pairs, OR_SEL                                       4442       4442
+  Node pairs, OR_SHIFTL                                      44         44      16078       8089
+  Node pairs, OR_SHIFTR                                                          4409       2209
+  Node pairs, OR_VARREF                         6141       9858       9858        251        131
+  Node pairs, OR_WORDSEL                                                          176         88
+  Node pairs, OR_XOR                                                               48         24
+  Node pairs, PIN_VARREF                       28625
+  Node pairs, RANGE_CONST                      51412         40         40         40
+  Node pairs, REDXOR_AND                                                            4          2
+  Node pairs, REPLICATE_CONCAT                 11996
+  Node pairs, REPLICATE_CONST                  13543        523        523
+  Node pairs, REPLICATE_OR                                    2          2
+  Node pairs, REPLICATE_SEL                                  73         73
+  Node pairs, REPLICATE_SELBIT                    37
+  Node pairs, REPLICATE_VARREF                     8        448        448
+  Node pairs, SCOPENAME_TEXT                                124        124        124        124
+  Node pairs, SCOPE_ACTIVE                                    1
+  Node pairs, SCOPE_CFUNC                                                1
+  Node pairs, SCOPE_VARSCOPE                                  1          1
+  Node pairs, SELBIT_ATTROF                     4952
+  Node pairs, SELBIT_CONST                      4908
+  Node pairs, SELBIT_VARREF                     4996
+  Node pairs, SELEXTRACT_ATTROF                 2426
+  Node pairs, SELEXTRACT_CONST                  4852
+  Node pairs, SELEXTRACT_VARREF                 2426
+  Node pairs, SEL_ADD                                        11         11
+  Node pairs, SEL_AND                                        16         16
+  Node pairs, SEL_COND                                       54         54
+  Node pairs, SEL_CONST                                   56126      56126
+  Node pairs, SEL_EXTEND                                    259        259
+  Node pairs, SEL_EXTENDS                                    75         75
+  Node pairs, SEL_MUL                                         4          4
+  Node pairs, SEL_NEGATE                                      4          4
+  Node pairs, SEL_OR                                        242        242
+  Node pairs, SEL_SHIFTL                                    602        602
+  Node pairs, SEL_SHIFTR                                     89         89
+  Node pairs, SEL_SHIFTRS                                   186        186
+  Node pairs, SEL_SUB                                         8          8
+  Node pairs, SEL_VARREF                                  26513      26513
+  Node pairs, SENITEM_VARREF                      67          1
+  Node pairs, SENTREE_SENITEM                     67          4
+  Node pairs, SFORMATF_CONST                      20
+  Node pairs, SFORMATF_SCOPENAME                  20         62         62         62         62
+  Node pairs, SFORMATF_TIME                                  62         62         62         62
+  Node pairs, SHIFTL_ADD                                                            1          1
+  Node pairs, SHIFTL_AND                                                         6329       3168
+  Node pairs, SHIFTL_CCAST                                                       6803       3438
+  Node pairs, SHIFTL_CONCAT                                  48         48
+  Node pairs, SHIFTL_COND                                     5          5        313        158
+  Node pairs, SHIFTL_CONST                       284       1234       1234      25405      12757
+  Node pairs, SHIFTL_EQ                                                          2404       1202
+  Node pairs, SHIFTL_EXTEND                                 929        929
+  Node pairs, SHIFTL_GT                                                            24         12
+  Node pairs, SHIFTL_GTE                                                            6          3
+  Node pairs, SHIFTL_GTS                                                            6          3
+  Node pairs, SHIFTL_LT                                                            17         10
+  Node pairs, SHIFTL_LTE                                                            4          2
+  Node pairs, SHIFTL_LTES                                                          10          5
+  Node pairs, SHIFTL_MUL                                                            4          2
+  Node pairs, SHIFTL_NEGATE                                                       234        118
+  Node pairs, SHIFTL_NEQ                                                         1050        550
+  Node pairs, SHIFTL_NOT                                                          749        375
+  Node pairs, SHIFTL_OR                                                           809        413
+  Node pairs, SHIFTL_REDXOR                                                         4          2
+  Node pairs, SHIFTL_SEL                                    176        176
+  Node pairs, SHIFTL_SHIFTL                                  10         10         32         16
+  Node pairs, SHIFTL_SHIFTRS                                                       10          5
+  Node pairs, SHIFTL_SUB                                                           18          9
+  Node pairs, SHIFTL_VARREF                      296        122        122        839        424
+  Node pairs, SHIFTL_WORDSEL                                                     6425       3213
+  Node pairs, SHIFTL_XOR                                                           12          6
+  Node pairs, SHIFTRS_AND                                                         186         93
+  Node pairs, SHIFTRS_CCAST                                                         4          2
+  Node pairs, SHIFTRS_CONCAT                                  8          8
+  Node pairs, SHIFTRS_CONST                                 186        186         64         32
+  Node pairs, SHIFTRS_NOT                                   158        158
+  Node pairs, SHIFTRS_OR                                                            2          1
+  Node pairs, SHIFTRS_SEL                                    28         28
+  Node pairs, SHIFTRS_SIGNED                      15
+  Node pairs, SHIFTRS_VARREF                      15          4          4        128         64
+  Node pairs, SHIFTR_ADD                                                            5          3
+  Node pairs, SHIFTR_AND                                      2          2        125         63
+  Node pairs, SHIFTR_CCAST                                                       2088       1142
+  Node pairs, SHIFTR_CONCAT                                  19         19
+  Node pairs, SHIFTR_COND                                                          40         22
+  Node pairs, SHIFTR_CONST                        16         10         10      24646      12672
+  Node pairs, SHIFTR_EQ                                                            69         34
+  Node pairs, SHIFTR_EXTEND                                   2          2
+  Node pairs, SHIFTR_EXTENDS                                                        6          3
+  Node pairs, SHIFTR_NEGATE                                   2          2          6          3
+  Node pairs, SHIFTR_NEQ                                                            2          1
+  Node pairs, SHIFTR_NOT                                                           34         21
+  Node pairs, SHIFTR_OR                                      10         10         86         41
+  Node pairs, SHIFTR_SEL                                     18         18
+  Node pairs, SHIFTR_SHIFTL                                  35         35        111         66
+  Node pairs, SHIFTR_SHIFTRS                                                       50         25
+  Node pairs, SHIFTR_SUB                                     12         12          6          3
+  Node pairs, SHIFTR_VARREF                      104         76         76       7224       3825
+  Node pairs, SHIFTR_WORDSEL                                                    14960       7506
+  Node pairs, SIGNED_CONST                       149
+  Node pairs, SIGNED_NEGATE                       79
+  Node pairs, SIGNED_REPLICATE                    15
+  Node pairs, SIGNED_VARREF                      555
+  Node pairs, SUB_ADD                                         2          2          2          1
+  Node pairs, SUB_AND                                                              56         33
+  Node pairs, SUB_CCAST                                                           192         97
+  Node pairs, SUB_COND                                                              4          2
+  Node pairs, SUB_CONST                           46        116        116          4          2
+  Node pairs, SUB_EXTEND                                     40         40
+  Node pairs, SUB_EXTENDS                                    18         18         18          9
+  Node pairs, SUB_OR                                          2          2          2          1
+  Node pairs, SUB_SEL                                        46         46
+  Node pairs, SUB_SHIFTL                                     20         20         20         10
+  Node pairs, SUB_SHIFTR                                                            2          1
+  Node pairs, SUB_SIGNED                          22
+  Node pairs, SUB_VARREF                          70         60         60          4          2
+  Node pairs, TOPSCOPE_SCOPE                                  1          1          1
+  Node pairs, TOPSCOPE_SENTREE                                1
+  Node pairs, TYPETABLE_BASICDTYPE                 1          1          1          1
+  Node pairs, UNPACKARRAYDTYPE_BASICDTYPE         20
+  Node pairs, UNPACKARRAYDTYPE_RANGE              20         20         20         20
+  Node pairs, UNSIGNED_VARREF                     92
+  Node pairs, VAR_BASICDTYPE                   89209
+  Node pairs, VAR_CONST                                                             2
+  Node pairs, VAR_UNPACKARRAYDTYPE                20
+  Node pairs, WORDSEL_ARRAYSEL                                                     24         15
+  Node pairs, WORDSEL_CONST                                                     30133      14904
+  Node pairs, WORDSEL_VARREF                                                    30109      14889
+  Node pairs, XOR_AND                                         2          2         52         27
+  Node pairs, XOR_CCAST                                                           116         63
+  Node pairs, XOR_COND                                        1          1          1          1
+  Node pairs, XOR_CONST                           61        132        132        132         66
+  Node pairs, XOR_EXTEND                                     22         22
+  Node pairs, XOR_GTE                                         4          4          4          2
+  Node pairs, XOR_NOT                                         2          2          2          1
+  Node pairs, XOR_OR                                                               46         23
+  Node pairs, XOR_SEL                                       193        193
+  Node pairs, XOR_SHIFTL                                     60         60         32         16
+  Node pairs, XOR_SHIFTR                                                            8          6
+  Node pairs, XOR_VARREF                         215        118        118         70         35
+  Node pairs, XOR_WORDSEL                                                         215        106
+  Node pairs, XOR_XOR                                        16         16          8          4
+
+  Var space, non-arrays, bytes                     0      70571      62296     218600      78633
+  Var space, scoped, bytes                                70571      62296
+
+  Vars, clock attribute                            0          1          1          1          0
+  Vars, unpacked arrayed                           0         49         49         49          0
+  Vars, width     1                                       17744      13033      13033         14
+  Vars, width     2                                         381        267        267
+  Vars, width     3                                         286        180        180          4
+  Vars, width     4                                         503        318        318          1
+  Vars, width     5                                         355        226        226          6
+  Vars, width     6                                         668        374        374
+  Vars, width     7                                          28         23         23
+  Vars, width     8                                        2012       1999       1999
+  Vars, width     9                                         940        488        488
+  Vars, width    10                                          13         10         10
+  Vars, width    11                                           4          4          4
+  Vars, width    12                                           8          8          8
+  Vars, width    13                                         125         66         66
+  Vars, width    14                                           7          7          7
+  Vars, width    15                                           5          5          5
+  Vars, width    16                                         146        143        143
+  Vars, width    17                                           7          6          6
+  Vars, width    20                                          37         22         22
+  Vars, width    21                                          16         16         16
+  Vars, width    22                                          14         14         14          4
+  Vars, width    23                                           5          4          4
+  Vars, width    25                                          23         17         17
+  Vars, width    26                                          13         10         10
+  Vars, width    27                                          25         20         20
+  Vars, width    28                                          13         12         12
+  Vars, width    29                                           8          8          8
+  Vars, width    30                                          17          9          9
+  Vars, width    31                                          24         22         22
+  Vars, width    32                                         212        175        175
+  Vars, width    33                                          25         23         23
+  Vars, width    34                                           7          6          6
+  Vars, width    39                                          25         15         15
+  Vars, width    40                                          68         45         45
+  Vars, width    41                                           3          3          3
+  Vars, width    43                                           2          2          2
+  Vars, width    44                                           2          1          1
+  Vars, width    48                                           1          1          1
+  Vars, width    49                                           2          1          1
+  Vars, width    50                                           1          1          1
+  Vars, width    51                                           1          1          1
+  Vars, width    52                                           4          3          3
+  Vars, width    54                                          15         14         14
+  Vars, width    55                                          11          8          8
+  Vars, width    56                                          13         12         12
+  Vars, width    58                                           6          4          4
+  Vars, width    62                                         139         71         71
+  Vars, width    63                                           3          3          3
+  Vars, width    64                                         178        152        152
+  Vars, width    65                                          55         40         40          2
+  Vars, width    66                                          11         11         11
+  Vars, width    75                                           1          1          1
+  Vars, width    76                                           1          1          1
+  Vars, width    78                                           1          1          1
+  Vars, width    79                                           1          1          1
+  Vars, width    81                                           1          1          1
+  Vars, width    83                                           1          1          1
+  Vars, width    84                                           1          1          1
+  Vars, width    96                                                               768        400
+  Vars, width   102                                           2          2          2
+  Vars, width   107                                           2          1          1
+  Vars, width   108                                           1          1          1
+  Vars, width   109                                           2          2          2
+  Vars, width   114                                           1          1          1
+  Vars, width   116                                           2          2          2
+  Vars, width   117                                           2          2          2
+  Vars, width   127                                           2          2          2
+  Vars, width   128                                                                85         56
+  Vars, width   129                                           3          3          3
+  Vars, width   130                                           3          2          2
+  Vars, width   155                                           1          1          1
+  Vars, width   160                                                                16         10
+  Vars, width   162                                           1          1          1
+  Vars, width   163                                           1          1          1
+  Vars, width   165                                           1          1          1
+  Vars, width   167                                           1          1          1
+  Vars, width   171                                           1          1          1
+  Vars, width   178                                           1          1          1
+  Vars, width   192                                                                16          8
+  Vars, width   209                                           1          1          1
+  Vars, width   224                                                                 6          3
+  Vars, width   233                                           1          1          1
+  Vars, width   236                                           1          1          1
+  Vars, width   247                                           1          1          1
+  Vars, width   252                                           1          1          1
+  Vars, width   256                                           5          4         30         12
+  Vars, width   270                                           1          1          1
+  Vars, width   288                                                                 6          3
+  Vars, width   315                                           1          1          1
+  Vars, width   320                                                                 2          1
+  Vars, width   347                                           1          1          1
+  Vars, width   352                                                                 4          2
+  Vars, width   369                                           1          1          1
+  Vars, width   382                                           1          1          1
+  Vars, width   384                                                                 6          3
+  Vars, width   403                                           1          1          1
+  Vars, width   416                                                                 6          3
+  Vars, width   421                                           1          1          1
+  Vars, width   422                                           1          1          1
+  Vars, width   438                                           1          1          1
+  Vars, width   448                                                                 6          3
+  Vars, width   455                                           1          1          1
+  Vars, width   471                                           1          1          1
+  Vars, width   480                                                                 4          2
+  Vars, width   499                                           1          1          1
+  Vars, width   512                                                                 4          2
+  Vars, width   521                                           1          1          1
+  Vars, width   542                                           1          1          1
+  Vars, width   544                                                                 4          2
+  Vars, width   563                                           1          1          1
+  Vars, width   576                                                                 4          2
+  Vars, width   588                                           1          1          1
+  Vars, width   608                                                                 4          2
+  Vars, width   613                                           1          1          1
+  Vars, width   632                                           1          1          1
+  Vars, width   640                                                                 2          1
+  Vars, width   672                                                                 2          1
+  Vars, width   673                                           1          1          1
+  Vars, width   699                                           1          1          1
+  Vars, width   704                                                                 2          1
+  Vars, width   721                                           1          1          1
+  Vars, width   736                                                                 4          2
+  Vars, width   740                                           1          1          1
+  Vars, width   765                                           1          1          1
+  Vars, width   768                                                                 2          1
+  Vars, width   785                                           1          1          1
+  Vars, width   800                                                                 4          2
+  Vars, width   807                                           1          1          1
+  Vars, width   830                                           1          1          1
+  Vars, width   832                                                                 2          1
+  Vars, width   857                                           1          1          1
+  Vars, width   864                                                                 2          1
+  Vars, width   876                                           1          1          1
+  Vars, width   896                                                                 4          2
+  Vars, width   907                                           1          1          1
+  Vars, width   928                                                                 4          2
+  Vars, width   934                                           1          1          1
+  Vars, width   960                                                                 2          1
+  Vars, width   961                                           1          1          1
+  Vars, width   992                                                                 2          1
+  Vars, width   998                                           1          1          1
+  Vars, width  1024                                                                 2          1
+  Vars, width  1045                                           1          1          1
+  Vars, width  1056                                                                 2          1
+  Vars, width  1082                                           1          1          1
+  Vars, width  1088                                                                 2          1
+  Vars, width  1113                                           1          1          1
+  Vars, width  1120                                                                 2          1
+  Vars, width  1132                                           1          1          1
+  Vars, width  1152                                                                 4          2
+  Vars, width  1167                                           1          1          1
+  Vars, width  1184                                                                 4          2
+  Vars, width  1185                                           1          1          1
+  Vars, width  1216                                                                 2          1
+  Vars, width  1231                                           1          1          1
+  Vars, width  1248                                                                 4          2
+  Vars, width  1278                                           1          1          1
+  Vars, width  1280                                                                 2          1
+  Vars, width  1304                                           1          1          1
+  Vars, width  1312                                                                 4          2
+  Vars, width  1323                                           1          1          1
+  Vars, width  1340                                           1          1          1
+  Vars, width  1344                                                                 4          2
+  Vars, width  1373                                           1          1          1
+  Vars, width  1376                                                                 2          1
+  Vars, width  1408                                                                 2          1
+  Vars, width  1419                                           1          1          1
+  Vars, width  1440                                                                 4          2
+  Vars, width  1465                                           1          1          1
+  Vars, width  1472                                                                 2          1
+  Vars, width  1492                                           1          1          1
+  Vars, width  1504                                                                 4          2
+  Vars, width  1536                                                                 2          1
+  Vars, width  1547                                           1          1          1
+  Vars, width  1568                                                                 4          2
+  Vars, width  1598                                           1          1          1
+  Vars, width  1600                                                                 2          1
+  Vars, width  1632                                                                 2          1
+  Vars, width  1634                                           1          1          1
+  Vars, width  1659                                           1          1          1
+  Vars, width  1664                                                                 4          2
+  Vars, width  1676                                           1          1          1
+  Vars, width  1694                                           1          1          1
+  Vars, width  1696                                                                 4          2
+  Vars, width  1728                                                                 2          1
+  Vars, width  1740                                           1          1          1
+  Vars, width  1760                                                                 4          2
+  Vars, width  1818                                           1          1          1
+  Vars, width  1824                                                                 2          1
+  Vars, width  1856                                                                 2          1
+  Vars, width  1861                                           1          1          1
+  Vars, width  1885                                           1          1          1
+  Vars, width  1888                                                                 2          1
+  Vars, width  1911                                           1          1          1
+  Vars, width  1920                                                                 2          1
+  Vars, width  1937                                           1          1          1
+  Vars, width  1952                                                                 4          2
+  Vars, width  1963                                           1          1          1
+  Vars, width  1984                                                                 4          2
+  Vars, width  1989                                           1          1          1
+  Vars, width  2015                                           1          1          1
+  Vars, width  2016                                                                 2          1
+  Vars, width  2039                                           1          1          1
+  Vars, width  2048                                                                 4          2
+  Vars, width  2060                                           1          1          1
+  Vars, width  2080                                           1          1          5          2
+  Vars, width  2100                                           1          1          1
+  Vars, width  2112                                                                 4          2
+  Vars, width  2120                                           1          1          1
+  Vars, width  2141                                           1          1          1
+  Vars, width  2144                                                                 6          3
+  Vars, width  2161                                           1          1          1
+  Vars, width  2176                                                                 4          2
+  Vars, width  2189                                           1          1          1
+  Vars, width  2208                                                                 4          2
+  Vars, width  2240                                                                 2          1
+  Vars, width  2272                                                                 2          1
+  Vars, width  2304                                                                 2          1
+  Vars, width  2336                                                                 2          1
+  Vars, width  2368                                                                 2          1
+  Vars, width  2389                                           1          1          1
+  Vars, width  2400                                                                 4          2
+  Vars, width  2423                                           1          1          1
+  Vars, width  2432                                                                 4          2
+  Vars, width  2464                                                                 2          1
+  Vars, width  2481                                           1          1          1
+  Vars, width  2496                                                                 4          2
+  Vars, width  2512                                           1          1          1
+  Vars, width  2528                                                                 4          2
+  Vars, width  2560                                                                 2          1
+  Vars, width  2592                                                                 2          1
+  Vars, width  2608                                           1          1          1
+  Vars, width  2624                                                                 4          2
+  Vars, width  2650                                           1          1          1
+  Vars, width  2656                                                                 4          2
+  Vars, width  2685                                           1          1          1
+  Vars, width  2688                                                                 4          2
+  Vars, width  2712                                           1          1          1
+  Vars, width  2720                                                                 4          2
+  Vars, width  2734                                           1          1          1
+  Vars, width  2749                                           1          1          1
+  Vars, width  2752                                                                 6          3
+  Vars, width  2779                                           1          1          1
+  Vars, width  2784                                                                 4          2
+  Vars, width  2816                                                                 2          1
+  Vars, width  2826                                           1          1          1
+  Vars, width  2847                                           1          1          1
+  Vars, width  2848                                                                 6          3
+  Vars, width  2862                                           1          1          1
+  Vars, width  2877                                           1          1          1
+  Vars, width  2880                                                                 6          3
+  Vars, width  2892                                           1          1          1
+  Vars, width  2907                                           1          1          1
+  Vars, width  2912                                                                 6          3
+  Vars, width  2923                                           1          1          1
+  Vars, width  2938                                           1          1          1
+  Vars, width  2944                                                                 6          3
+  Vars, width  2953                                           1          1          1
+  Vars, width  2968                                           1          1          1
+  Vars, width  2976                                                                 6          3
+  Vars, width  3008                                                                 2          1
+  Vars, width  3014                                           1          1          1
+  Vars, width  3040                                                                 4          2
+  Vars, width  3065                                           1          1          1
+  Vars, width  3072                                                                 4          2
+  Vars, width  3104                                                                 2          1
+  Vars, width  3134                                           1          1          1
+  Vars, width  3136                                                                 4          2
+  Vars, width  3168                                                                 2          1
+  Vars, width  3187                                           1          1          1
+  Vars, width  3200                                                                 4          2
+  Vars, width  3221                                           1          1          1
+  Vars, width  3232                                                                 4          2
+  Vars, width  3244                                           1          1          1
+  Vars, width  3262                                           1          1          1
+  Vars, width  3264                                                                 6          3
+  Vars, width  3280                                           1          1          1
+  Vars, width  3296                                                                 4          2
+  Vars, width  3299                                           1          1          1
+  Vars, width  3317                                           1          1          1
+  Vars, width  3328                                                                 6          3
+  Vars, width  3343                                           1          1          1
+  Vars, width  3360                                                                 4          2
+  Vars, width  3377                                           1          1          1
+  Vars, width  3392                                                                 4          2
+  Vars, width  3395                                           1          1          1
+  Vars, width  3421                                           1          1          1
+  Vars, width  3424                                                                 6          3
+  Vars, width  3451                                           1          1          1
+  Vars, width  3456                                                                 4          2
+  Vars, width  3474                                           1          1          1
+  Vars, width  3488                                                                 4          2
+  Vars, width  3504                                           1          1          1
+  Vars, width  3520                                                                 4          2
+  Vars, width  3522                                           1          1          1
+  Vars, width  3548                                           1          1          1
+  Vars, width  3552                                                                 6          3
+  Vars, width  3579                                           1          1          1
+  Vars, width  3584                                                                 4          2
+  Vars, width  3602                                           1          1          1
+  Vars, width  3616                                                                 4          2
+  Vars, width  3635                                           1          1          1
+  Vars, width  3648                                                                 4          2
+  Vars, width  3661                                           1          1          1
+  Vars, width  3680                                                                 4          2
+  Vars, width  3687                                           1          1          1
+  Vars, width  3712                                                                 4          2
+  Vars, width  3723                                           1          1          1
+  Vars, width  3744                                                                 4          2
+  Vars, width  3756                                           1          1          1
+  Vars, width  3776                                                                 4          2
+  Vars, width  3792                                           1          1          1
+  Vars, width  3808                                                                 4          2
+  Vars, width  3836                                           1          1          1
+  Vars, width  3840                                                                 4          2
+  Vars, width  3872                                                                 2          1
+  Vars, width  3904                                                                 2          1
+  Vars, width  3936                                                                 2          1
+  Vars, width  3968                                                                 2          1
+  Vars, width  4000                                                                 2          1
+  Vars, width  4014                                           1          1          1
+  Vars, width  4032                                                                 4          2
+  Vars, width  4057                                           1          1          1
+  Vars, width  4064                                                                 4          2
+  Vars, width  4088                                           1          1          1
+  Vars, width  4096                                                                 4          2
+  Vars, width  4104                                           1          1          1
+  Vars, width  4128                                           1          1          5          2
+  Vars, width  4154                                           1          1          1
+  Vars, width  4160                                                                 4          2
+  Vars, width  4180                                           1          1          1
+  Vars, width  4192                                                                 4          2
+  Vars, width  4206                                           1          1          1
+  Vars, width  4224                                                                 4          2
+  Vars, width  4232                                           1          1          1
+  Vars, width  4256                                                                 4          2
+  Vars, width  4258                                           1          1          1
+  Vars, width  4288                                                                 4          2
+  Vars, width  4320                                           1          1          3          1
+  Vars, width  4344                                           1          1          1
+  Vars, width  4352                                                                 4          2
+  Vars, width  4384                                                                 2          1
+  Vars, width  4416                                                                 2          1
+  Vars, width  4421                                           1          1          1
+  Vars, width  4448                                           1          1          5          2
+  Vars, width  4479                                           1          1          1
+  Vars, width  4480                                                                 4          2
+  Vars, width  4504                                           1          1          1
+  Vars, width  4512                                                                 4          2
+  Vars, width  4517                                           1          1          1
+  Vars, width  4544                                                                 2          1
